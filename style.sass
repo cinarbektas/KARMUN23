@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+// * SASS 
+
+$text__color: #f1f1f1
+$bg_light__color: #363636
+$bg_dark___color: #272626
+$desktop3xl: 2000px
+$desktop2xl: 1750px
+$desktop1xl: 1450px
+$desktop: 1200px
+$laptop: 1024px
+$tablet: 768px
+$phone: 578px
+$miniphone: 478px
+
+// * Html  & General Basis
+
+*
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+    color: $text__color
+
+.toggle
+    width: 100% !important
+
+#letter__bracket
+    margin: 1rem
+    display: none
+
+.full__height__container
+    height: 100vh
+// * Navbar
+
+#navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $bg_dark___color
+    padding: 1% 10%
+
+#nav__brand
+    display: inline-flex
+
+#brand__text
+    font-size: 2.4em
+    font-weight: 500
+    padding: 0.7rem 0rem 0rem 0.6rem
+
+#brand__logo
+    width: 3rem
+    padding: 1rem 0rem
+
+#nav__item
+    font-size: 1.2em
+    padding: 0rem 1rem
+
+.nav__link
+    text-decoration: none
+    color: $text__color
+
+// * responsive nav 
+
+#nav__menu
+    cursor: pointer
+    z-index: 2
+
+.bar1,.bar2,.bar3
+    width: 30px
+    height: 3px
+    background-color: $text__color
+    margin: 6px 0
+    transition: 0.4s
+
+.change
+
+    & .bar1
+        transform: translate(0, 10px) rotate(-45deg)
+        background-color: $text__color
+
+    & .bar2
+        opacity: 0
+        background-color: $text__color
+    & .bar3
+        transform: translate(0, -8px) rotate(45deg)
+        background-color: $text__color
+
+#overlay
+    height: 100%
+    width: 0
+    position: fixed
+    z-index: 1
+    top: 0
+    left: 0
+    background-color: rgb(0,0,0)
+    background-color: rgba(0,0,0, 0.9)
+    overflow-x: hidden
+    transition: 0.5s
+
+.overlay-content
+    position: relative
+    top: 25%
+    width: 100%
+    text-align: center
+
+    & a
+        padding: 8px
+        font-size: 1.6em
+        color: #818181
+        display: block
+        transition: 0.3s
+
+        &:hover,&:focus
+            color: #f1f1f1
+
+// * Main Page
+#main__page
+    background-color: $bg_light__color
+    display: grid
+    grid-template-columns: 47% 53%
+    align-items: center
+    padding: 3rem 0rem
+    height: 70vh
+
+#main__one
+    text-align: center
+
+#main__two
+
+    & h2
+        font-size: 3.6em
+        font-weight: 600
+    & h3
+        font-size: 2em
+    & p
+        font-size: 1.4em
+
+#main__logo
+    width: 20em
+
+// * welcome letters 
+
+#welcome__letters__section
+    background-color: $bg_light__color
+    align-items: center
+    padding: 6rem 4rem
+    text-align: center
+
+    & h3
+        font-size: 2.8em
+        padding-bottom: 1.2rem
+        font-weight: 600
+
+#welcome__letters
+    display: grid
+    grid-template-columns: 50% 50%
+    font-size: 1.6em
+    gap: 1rem
+
+.welcome__letter
+    padding: 0rem 2rem
+
+// * Footer 
+
+#footer
+    background-color: $bg_dark___color
+    text-align: center
+    padding: 2rem 0rem
+
+// * Carousel 
+#carousel
+    display: flex
+    align-content: center
+    justify-content: center
+    background-color: $bg_dark___color
+    padding: 4rem 0rem
+
+.wrapper
+    max-width: 1600px
+    position: relative
+    margin: 0rem 2rem
+
+    & .carousel
+        white-space: nowrap
+        font-size: 0px
+        cursor: pointer
+        overflow: hidden
+
+        & img
+            height: 340px
+            object-fit: cover
+            width: calc( 100% / 3 )
+            margin-left: 1rem
+
+            &:first-child
+                margin-left: 0px
+
+// * Our team
+
+#ourteam__body
+    background-color: $bg_light__color
+    text-align: center
+
+.ot__title
+    padding: 2rem 0rem
+    font-size: 2.8em
+    font-weight: 500
+    letter-spacing: 1px
+
+.card-container
+
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 3rem
+    padding: 0rem 16rem 6rem 16rem
+    margin: 2rem
+    font-weight: 300
+    font-style: normal
+    font-size: 1em
+    line-height: 1.5
+    color: #303336
+
+.card
+    height: 470px
+    border-radius: 10px
+    background-color: #fff
+    box-shadow: 0 40px 40px -20px #8fc7d544
+    overflow: hidden
+
+.card-top
+    height: 236px
+    font-family: 'neuzeit-grotesk', sans-serif
+    font-weight: 300
+    font-style: normal
+    font-size: 1em
+    line-height: 1.5
+    color: #303336
+    background-color: #d1e8ee
+    overflow: hidden
+
+    a
+        display: block
+        height: 100%
+
+    img
+        width: 100%
+        height: inherit
+        object-fit: cover
+        object-position: center
+        transition: 300ms
+
+.card-content
+    padding: 2rem
+
+    .tag
+        font-weight: 700
+        letter-spacing: 2px
+
+.tag-travel
+    color: #33459b
+
+.tag-nature
+    color: #339b4b
+
+.tag-architecture
+    color: #9b3d33
+
+.title
+    color: #303336
+    font-weight: 700
+    transition: 300ms
+    margin-top: 0.6rem
+
+.card__text
+    color: #7B8591
+    margin-top: 0.6rem
+
+.card-top a img:hover
+    opacity: .75
+
+.title:hover
+    color: #303336bb
+
+// * Committees
+#committees
+    background-color: $bg_light__color
+    text-align: center
+
+#c__box
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 1rem
+    padding: 0rem 1rem 1rem 1rem
+
+.committees
+    transition: 0.3s
+    cursor: pointer
+    padding: 1rem
+
+    &:hover
+        opacity: .75
+
+// * Venue, Contactus
+#venue,#contactus
+    background-color: $bg_light__color
+    text-align: center
+
+#venue__map,#contactus__map
+    width: 100%
+    max-width: 80%
+    padding: 2rem 2rem 0rem 2rem
+
+#venue__buttons
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+#contact__buttons
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    place-items: center
+    padding: 0rem 4rem
+
+.venue__button
+    background-color: $bg_dark___color
+    border: none
+    color: white
+    padding: 1.2rem 2rem
+    margin: 2rem
+    font-size: 1.6em
+    border-radius: 1rem
+    transition: 0.2s
+
+    &:hover
+        opacity: .75
+
+// * Faq
+#faqs
+    background-color: $bg_light__color
+    padding-top: 1rem
+
+    & h3
+        text-align: center
+
+.faq
+    display: grid
+    place-items: center
+    padding-top: 1rem
+
+#accordion
+    max-width: 1200px
+    padding: 1rem 1rem 2rem 1rem
+
+    & .faq__a
+        padding: 0rem 1rem
+        line-height: 2rem
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.5s
+        font-size: 1.2em
+        padding-left: 1rem
+
+    & li
+        list-style: none
+        width: 100%
+        margin-bottom: 2rem
+        padding: 1rem
+        background-color: white
+        border-radius: 1rem
+
+        & label
+            padding: 1rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 1.8em
+            font-weight: 500
+            cursor: pointer
+
+            & + input[type="radio"]
+                display: none
+
+                &:checked + .faq__a
+                    max-height: 400px
+
+            & span
+                transform: rotate(90deg)
+                font-size: 1.2em
+
+    & label,input,span,.faq__a
+        color: $bg_dark___color
+
+// * Schedule
+#schedule__temperory
+    display: grid
+    place-items: center
+    height: 80vh
+    background-color: $bg_light__color
+
+    & p
+        font-size: 2.6em
+
+// * Apply Now
+#applynow
+    background-color: $bg_light__color
+    padding: 2rem 1rem
+    text-align: center
+
+#applynow__two__columns
+    display: grid
+    grid-template-columns: 1fr 1fr
+    place-items: center
+
+#applynow__three__columns
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    place-items: center
+    margin: 0rem 2rem
+
+.blog
+    cursor: pointer
+    margin: 2rem 1rem
+    max-width: 80%
+    height: 18em
+    background: url(https://images.wallpaperscraft.com/image/single/mask_neon_glitter_129878_2500x2500.jpg) no-repeat
+    background-size: 120%
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5)
+    border-radius: 0.7em
+    transition: all 0.4s
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)
+
+    &:hover
+        opacity: 0.75
+
+.title-box
+    display: inline-block
+    width: 100%
+    text-align: center
+    margin-top: 2em
+
+.col__2__card__head__text,.col__3__card__head__text
+    display: inline-block
+    font-weight: 500
+    letter-spacing: 2px
+    font-size: 1.6em
+    text-align: center
+
+.info
+    font-size: 1.2em
+    color: #ddd
+    line-height: 1.1em
+    padding: 0 2em
+    position: relative
+    bottom: -4em
+    opacity: 0
+
+#periods
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+
+.period__type
+    font-size: 2.2em
+    font-weight: 600
+.period__date
+    font-size: 1.6em
+
+
+// * responsive 
+@media screen and (min-width: $desktop3xl)
+
+    // * Our Team
+    .card
+        height: auto
+        margin: 0rem 2rem
+
+    .card-top
+        height: 300px !important
+
+    .card-container
+        font-size: 1.2em
+
+    // * Venue, Contactus
+    #venue__map,#contactus__map
+        height: 1000px
+
+    .venue__button
+        margin: 2rem
+        font-size: 1.6em
+
+@media screen and (max-width: $desktop2xl)
+    // * Venue, Contactus
+    #venue__map
+        height: 750px
+
+    .venue__button
+        margin: 2rem
+        font-size: 1.6em
+
+@media screen and (max-width: $desktop1xl)
+
+    // * Our Team
+    .card-container
+        margin: 0
+        padding: 2rem
+
+    //* Faqs
+    #accordion
+        max-width: 1000px
+
+    //* Apply Now
+    .col__3__card__head__text
+        font-size: 1.3em
+
+@media screen and (max-width: $desktop)
+
+    // * carousel
+    #carousel
+
+        & .carousel
+
+            & img
+                width: 50%
+
+    // * Our Team
+    .card-container
+        grid-template-columns: 1fr 1fr
+
+    // * Venue, Contactus
+    #venue__buttons,#contactus_buttons
+        flex-direction: column
+
+    .venue__button
+        margin: 1rem
+        font-size: 1.4em
+
+    //* Faqs
+    #accordion
+        max-width: 800px
+
+    //* Apply Now
+    #applynow__three__columns
+        grid-template-columns: 1fr 1fr
+        margin: 0
+
+@media screen and (max-width: $laptop)
+    // * welcome letters 
+    .welcome__letter
+        padding: 0rem
+
+    // * Committees
+    #c__box
+        grid-template-columns: 1fr 1fr
+
+    //* Faqs
+    #accordion
+        max-width: 700px
+
+        & li
+
+            & label
+                font-size: 1.6em
+
+    //* Apply Now
+    #applynow__three__columns,#applynow__two__columns
+        grid-template-columns: 1fr
+
+    .col__2__card__head__text
+        font-size: 1.3em
+
+    #periods
+        font-size: 14px
+
+@media screen and (max-width: $tablet)
+
+    // * main page
+    #main__page
+        font-size: 12px
+
+    // * welcome letters 
+    #welcome__letters__box
+        font-size: 12px
+
+    // * footer
+    #footer__links
+        grid-template-columns: 50% 50%
+
+    // * carousel
+    #carousel
+
+        & .carousel
+
+            & img
+                width: 100%
+
+    // * Committees
+    #c__box
+        grid-template-columns: 1fr
+        padding: 0rem 4rem
+
+    // * Venue, Contactus
+    #venue__map
+        height: 600px
+
+    .venue__button
+        margin: 1.6em 0rem
+
+    #contact__buttons
+        grid-template-columns: 1fr
+
+
+    //* Faqs
+    #accordion
+        max-width: 600px
+        padding: 0rem 3rem
+
+        & li
+
+            & .faq__a
+                font-size: 1.2em
+
+    //* Apply Now
+    #periods
+        grid-template-columns: 1fr
+
+    .period__date
+        margin-bottom: 1.6rem
+
+@media screen and (max-width: $phone)
+
+    // * main page
+    #main__page
+        grid-template-columns: 100%
+        text-align: center
+
+    #main__two
+        padding: 0rem 1rem 1rem 1rem
+
+    // * welcome letters 
+
+    #welcome__letters
+        grid-template-columns: 100%
+
+    #letter__bracket
+        display: block
+
+    #brand__text
+        font-size: 2.2em
+        padding-top: 0.4em
+
+    // * Footer
+    #footer__links
+        font-size: 1.2em
+
+    // * Our Team
+    .card-container
+        grid-template-columns: 1fr
+
+    .ot__title
+        font-size: 2.4em
+
+    // * Committees
+    #c__box
+        grid-template-columns: 1fr
+
+    // * Venue, Contactus
+    #venue__map
+        height: 400px 
+
+    .venue__button
+        margin: 1.6rem 0rem 2rem 0rem
+        font-size: 1.4em
+
+    //* Faqs
+    #accordion
+        max-width: 500px
+        padding: 0rem 3rem
+
+        & li
+
+            & label
+                font-size: 1.3em
+
+            & .faq__a
+                font-size: 1em
+
+@media screen and (max-width: $miniphone)
+    #accordion
+        max-width: 500px
+        padding: 0rem 3rem
+
+        & li
+
+            & label
+                font-size: 1em
+
+            & .faq__a
+                font-size: 1em
+
+
+    // * Venue, Contactus
+    #contact__buttons
+        font-size: 0.8em
